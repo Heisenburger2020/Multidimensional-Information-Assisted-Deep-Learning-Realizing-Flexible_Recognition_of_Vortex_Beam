@@ -1,0 +1,14 @@
+function u = GenerateLGLight(l, p, w0, L, N)
+ax = gpuArray.linspace(-L, L, N);
+[X, Y] = meshgrid(ax);
+r = sqrt(X.^2+Y.^2);
+a = sqrt(2) * r / w0;
+term2 = mlaguerre(p, abs(l), a.^2);
+% term2 = laguerreL(p,l,a.^2);
+theta = atan2(Y,X);
+b = abs(l);
+term1 = sqrt((2*factorial(p))/(pi*factorial(p+b)));
+term3 = exp(-1*l*1i*theta);
+term4 = exp(-1*(a.^2)/2);
+term5 = (a.^b)*((-1)^p)/(w0);
+u = term1 .* term2 .* term3 .* term4 .* term5;
