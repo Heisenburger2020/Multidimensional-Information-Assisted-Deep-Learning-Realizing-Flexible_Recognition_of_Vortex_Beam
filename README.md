@@ -1,4 +1,6 @@
-# Multidimensional_Information_Assisted_Deep_Learning_Realizing_Flexible_Recognition_of_Vortex_Beam_Mo
+# Multidimensional Information Assisted Deep Learning Realizing Flexible Recognition of Vortex Beam Modes
+This is the official implementation of "Multidimensional Information Assisted Deep Learning Realizing Flexible Recognition of Vortex Beam Modes".
+
 This project made use of both intensity and phase information to recognize orbital angular momentum mode.
 
 This project include codes for optical simulation and neural network.
